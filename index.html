@@ -153,6 +153,8 @@
  @media(max-width:820px){.picks{grid-template-columns:1fr}}
  .pick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
  .pick h3{font-size:17px;font-weight:600;margin-bottom:12px;line-height:1.5}
+ .pnote{font-size:14.5px;color:#8b93a1;line-height:1.7;margin:-4px 0 12px;
+  border-left:2px solid #3a4250;padding-left:10px}
  .prow{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid #1e222a}
  .prow:first-child{border-top:none;padding-top:2px}
  .prank{flex:0 0 29px;height:29px;line-height:29px;text-align:center;border-radius:7px;
@@ -256,7 +258,7 @@
 </style></head><body><div class="wrap">
  <h1>A股资金动向地图</h1>
  <div class="tagline">机构在买什么 · 哪里估值便宜 · 钱有多集中</div>
- <div class="sub">行业状态截至 <b>2026-10-09</b>（申万发布有延迟）· 个股 10-10 00:04 抓取（非交易日，内容为最近一次收盘快照） ·
+ <div class="sub">行业状态截至 <b>2026-10-09</b>（申万发布有延迟）· 个股 10-10 01:31 抓取（非交易日，内容为最近一次收盘快照） ·
   估值历史自 2016 年 · 10Y 国债 1.69% · 申万一级行业 31 个</div>
 
  <div class="tabbar">
@@ -274,10 +276,10 @@
        · 由融资杠杆增速与杠杆资金活跃度合成</div>
    </div>
    <div class="hbox">
-     <div class="hlabel">机构在看多这些方向</div>
+     <div class="hlabel">机构资金最近在买这些行业</div>
      <div class="hlist">传媒、家用电器、房地产、电力设备、社会服务、非银金融</div>
      <div class="hmeta">筛选条件：近一个半月龙虎榜机构净买入 &nbsp;+&nbsp; 估值处在自身历史低位
-       （共 6 个）</div>
+       （共 6 个）· <b style="color:#d9a441">这是事实描述，不是看好信号</b></div>
    </div>
  </div>
 
@@ -327,10 +329,16 @@
  <div class="picks">
    <div class="pick">
      <h3 style="color:#e08078">值得看 —— 机构在买 + 估值在自身历史低位</h3>
+     <div class="pnote">用 2016 年以来的 <b>32 次</b>调仓检验过：这个组合之后 60 个交易日
+       <b>跑赢全行业平均的概率只有 38%</b>（均值 -0.6%）。
+       它说明「机构正在买、而且不贵」，<b>但不代表后面对</b>——完整检验见「历史复盘」页。</div>
      <div class="prow"><div class="prank">1</div><div class="pbody"><div class="ptop"><span class="pname">家用电器</span><span class="pinst up">+3.7 亿</span></div><div class="pbar"><i class="up" style="width:100%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>38</b>低于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-3.8%</b></span><span class="pm"><i>分红</i>比国债高 2.54 个点</span></div></div></div><div class="prow"><div class="prank">2</div><div class="pbody"><div class="ptop"><span class="pname">房地产</span><span class="pinst up">+2.7 亿</span></div><div class="pbar"><i class="up" style="width:74%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>29</b>低于自身历史中位</span><span class="pm"><i>近20日</i><b class="up">+5.5%</b></span><span class="pm"><i>分红</i>比国债低 1.20 个点</span></div></div></div><div class="prow"><div class="prank">3</div><div class="pbody"><div class="ptop"><span class="pname">社会服务</span><span class="pinst up">+2.3 亿</span></div><div class="pbar"><i class="up" style="width:64%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>37</b>低于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-2.6%</b></span><span class="pm"><i>分红</i>比国债低 0.48 个点</span></div></div></div><div class="prow"><div class="prank">4</div><div class="pbody"><div class="ptop"><span class="pname">非银金融</span><span class="pinst up">+1.0 亿</span></div><div class="pbar"><i class="up" style="width:28%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>12</b>自身历史最低区间</span><span class="pm"><i>近20日</i><b class="dn">-6.7%</b></span><span class="pm"><i>分红</i>比国债高 1.52 个点</span></div></div></div><div class="prow"><div class="prank">5</div><div class="pbody"><div class="ptop"><span class="pname">电力设备</span><span class="pinst up">+0.6 亿</span></div><div class="pbar"><i class="up" style="width:16%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>24</b>低于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-6.8%</b></span><span class="pm"><i>分红</i>比国债低 0.42 个点</span></div></div></div><div class="prow"><div class="prank">6</div><div class="pbody"><div class="ptop"><span class="pname">传媒</span><span class="pinst up">+0.6 亿</span></div><div class="pbar"><i class="up" style="width:15%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>42</b>低于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-0.4%</b></span><span class="pm"><i>分红</i>比国债低 0.06 个点</span></div></div></div>
    </div>
    <div class="pick">
      <h3 style="color:#61c08a">要小心 —— 机构在卖 + 估值在自身历史高位</h3>
+     <div class="pnote">同口径检验 <b>34 次</b>：这个组合之后 60 个交易日跑赢的概率
+       41%（均值 -0.4%）——<b>方向确实偏弱，但统计上不够强</b>（t=-0.76）。
+       列出来是为了让你知道「机构在卖什么」，不是让你据此回避。</div>
      <div class="prow"><div class="prank">1</div><div class="pbody"><div class="ptop"><span class="pname">电子</span><span class="pinst dn">-13.5 亿</span></div><div class="pbar"><i class="dn" style="width:100%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>71</b>高于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-9.2%</b></span></div></div></div><div class="prow"><div class="prank">2</div><div class="pbody"><div class="ptop"><span class="pname">计算机</span><span class="pinst dn">-5.8 亿</span></div><div class="pbar"><i class="dn" style="width:43%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>56</b>接近自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-6.1%</b></span></div></div></div><div class="prow"><div class="prank">3</div><div class="pbody"><div class="ptop"><span class="pname">纺织服饰</span><span class="pinst dn">-4.4 亿</span></div><div class="pbar"><i class="dn" style="width:33%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>46</b>接近自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-2.1%</b></span></div></div></div><div class="prow"><div class="prank">4</div><div class="pbody"><div class="ptop"><span class="pname">石油石化</span><span class="pinst dn">-1.7 亿</span></div><div class="pbar"><i class="dn" style="width:13%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>88</b>自身历史最高区间</span><span class="pm"><i>近20日</i><b class="dn">-2.7%</b></span></div></div></div><div class="prow"><div class="prank">5</div><div class="pbody"><div class="ptop"><span class="pname">环保</span><span class="pinst dn">-0.8 亿</span></div><div class="pbar"><i class="dn" style="width:6%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>79</b>高于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-3.6%</b></span></div></div></div><div class="prow"><div class="prank">6</div><div class="pbody"><div class="ptop"><span class="pname">煤炭</span><span class="pinst dn">-0.7 亿</span></div><div class="pbar"><i class="dn" style="width:6%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>93</b>自身历史最高区间</span><span class="pm"><i>近20日</i><b class="up">+0.3%</b></span></div></div></div><div class="prow"><div class="prank">7</div><div class="pbody"><div class="ptop"><span class="pname">汽车</span><span class="pinst dn">-0.7 亿</span></div><div class="pbar"><i class="dn" style="width:5%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>50</b>接近自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-4.8%</b></span></div></div></div><div class="prow"><div class="prank">8</div><div class="pbody"><div class="ptop"><span class="pname">轻工制造</span><span class="pinst dn">-0.6 亿</span></div><div class="pbar"><i class="dn" style="width:4%"></i></div><div class="pmeta"><span class="pm"><i>估值</i><b>77</b>高于自身历史中位</span><span class="pm"><i>近20日</i><b class="dn">-2.1%</b></span></div></div></div>
    </div>
  </div>
@@ -463,7 +471,7 @@
  <div class="foot">
   数据源：申万宏源研究（行业指数与估值，官方）、中债（国债收益率）、
   中国证券登记结算公司（两融）、沪深交易所、新浪财经（个股快照）。<br>
-  本页为公开数据的客观呈现，不构成投资建议，不做涨跌预测。生成于 2026-10-10 00:04
+  本页为公开数据的客观呈现，不构成投资建议，不做涨跌预测。生成于 2026-10-10 01:32
  </div>
 </div>
 <script>
