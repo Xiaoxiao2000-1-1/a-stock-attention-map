@@ -229,7 +229,7 @@
  .jump a b{color:#fff;font-weight:600}
  .flash{animation:flashring 1.5s ease-out 1}
  /* 吸顶页签会盖住跳转目标的上沿，留出滚动边距 */
- #sec-heat,#sec-buy,#sec-flow,#sec-quad,#sec-tm,#sec-picks,#sec-sum{scroll-margin-top:88px}
+ #sec-heat,#sec-buy,#sec-flow,#sec-quad,#sec-tm,#sec-picks,#sec-sum,#sec-delta{scroll-margin-top:88px}
  @keyframes flashring{0%{box-shadow:0 0 0 3px rgba(90,169,230,.65)}
   100%{box-shadow:0 0 0 3px rgba(90,169,230,0)}}
  /* 热力图点击弹层（速览卡模式，参考 OpenBB 的个股速览） */
@@ -316,6 +316,12 @@
  .chip.preset:hover{border-color:#4a90c4;color:#dfe4ea}
  /* 明细页子模块导航（2026-10-14 拆分：行业数据表 / 钱去哪了 / 相似时刻） */
  .covline{font-size:var(--fs-xs);color:#7d8794;line-height:1.7;margin-top:8px}
+ .dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+ .dcell{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px 14px;font-size:var(--fs-base)}
+ .dcell span{display:block;font-size:var(--fs-sm);color:#7d8794;margin-bottom:6px}
+ .dcell b{font-weight:600;color:#dfe4ea;line-height:1.6;font-variant-numeric:tabular-nums}
+ .dcell.up b{color:#e08078} .dcell.dn b{color:#61c08a}
  .subnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 6px}
  .subtab{font-size:var(--fs-base);padding:9px 16px;border:1px solid var(--line);border-radius:10px;
   background:#141720;color:#9aa3ae;cursor:pointer;font-family:inherit;min-height:42px}
@@ -576,7 +582,7 @@ details.armore summary{cursor:pointer;color:var(--blue);font-size:var(--fs-base)
 </style></head><body><div class="wrap">
  <h1>A股事实台账</h1>
  <div class="tagline">资金 · 估值 · 消息 —— 每个说法都标明检验结果</div>
- <div class="sub">行业状态截至 <b>2026-10-13</b>（申万发布有延迟）· 个股 10-13 23:45 抓取（收盘后快照） ·
+ <div class="sub">行业状态截至 <b>2026-10-13</b>（申万发布有延迟）· 个股 10-13 23:54 抓取（收盘后快照） ·
   估值历史自 2016 年 · 10Y 国债 1.67% · 申万一级行业 31 个</div>
 
  <div class="tabbar">
@@ -618,7 +624,10 @@ details.armore summary{cursor:pointer;color:var(--blue);font-size:var(--fs-base)
    <a href="#sec-flow" data-jump="sec-flow"><b>63</b> 只股票占掉 20% 成交</a>
    <a href="#sec-quad" data-jump="sec-quad"><b>15</b> 个行业估值偏贵</a>
    <a href="#" data-goto="ai"><b>5</b> 条 AI 必读</a>
+   <a href="#sec-delta" data-jump="sec-delta"><b>今日变化</b> 对比上一交易日</a>
  </div>
+
+ <h2 id="sec-delta">今日变化 · 对比上一交易日</h2><div class="dgrid"><div class="dcell up"><span>龙虎榜席位加仓最多</span><b>建筑材料 +5.5亿、电力设备 +1.7亿、商贸零售 +0.6亿</b></div><div class="dcell dn"><span>龙虎榜席位减仓最多</span><b>机械设备 -1.9亿、基础化工 -1.0亿、汽车 -0.7亿</b></div><div class="dcell up"><span>成交额份额上升</span><b>电子 +1.44pp、通信 +0.99pp、机械设备 +0.82pp</b></div><div class="dcell dn"><span>成交额份额下降</span><b>电力设备 -1.19pp、医药生物 -0.73pp、农林牧渔 -0.58pp</b></div><div class="dcell"><span>市场温度（越大越热）</span><b>19（上一交易日 25，-5）</b></div></div><div class="covline">口径：加仓/减仓＝45 个交易日滚动净买的**日变化**（不是当日净买）；成交额份额＝该行业今日成交额占全市场比重减上一交易日（pp＝百分点）。本页最近一次口径修复（2026-10-13）：估值口径页面与回测统一、入场时点统一 close(t+1)、资金强度改为同 45 交易日窗口、新增龙虎榜覆盖度披露 —— 详见 METHODOLOGY-CHANGELOG.md。</div>
 
  <div class="cards" id="sec-flow">
    <div class="card tod wide" data-cov="breadth">
@@ -956,7 +965,7 @@ details.armore summary{cursor:pointer;color:var(--blue);font-size:var(--fs-base)
  <div class="foot">
   数据源：申万宏源研究（行业指数与估值，官方）、中债（国债收益率）、
   中国证券登记结算公司（两融）、沪深交易所、新浪财经（个股快照）。<br>
-  本页为公开数据的客观呈现，不构成投资建议，不做涨跌预测。生成于 2026-10-13 23:45
+  本页为公开数据的客观呈现，不构成投资建议，不做涨跌预测。生成于 2026-10-13 23:54
  </div>
 </div>
 <script>
